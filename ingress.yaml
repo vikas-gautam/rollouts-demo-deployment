@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: ingress-nginx-office  # Specify the Ingress class here
   rules:
-  - host: rollouts-demo.apps.argoproj.io
+  - host: rollouts-demo-apps.sprinklr.com
     http:
       paths:
       - path: /
