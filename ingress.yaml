@@ -2,19 +2,17 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: rollouts-demo
-  annotations:
-    ingress.kubernetes.io/proxy-body-size: 100M
-    kubernetes.io/ingress.class: "ingress-nginx-office"  # Updated Ingress class
-    ingress.kubernetes.io/app-root: "/"
 spec:
+  ingressClassName: ingress-nginx-office  # Specify the Ingress class here
   rules:
   - host: rollouts-demo.apps.argoproj.io
     http:
       paths:
       - path: /
+        pathType: Prefix  # Define pathType
         backend:
           service:
-            name: rollouts-demo  # Updated syntax for service name (kubernetes v1.19+)
+            name: rollouts-demo  # Correct service name syntax (kubernetes v1.19+)
             port:
-              number: 80  # Updated syntax for port
+              number: 80  # Correct port syntax
 
