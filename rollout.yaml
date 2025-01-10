@@ -37,12 +37,12 @@ spec:
       # previewService: rollouts-demo-preview
       # autoPromotionEnabled: false
       # autoPromotionSeconds: 30
-     canary: 
-       steps:
-       - setWeight: 20
-       - pause: {}
-       - setWeight: 40
-       - pause: {}
-       - setWeight: 50
-       - pause: {}
-       - setWeight: 100     
+    canary: 
+      steps:
+      - setWeight: 20
+      - pause: {}
+      - setWeight: 40
+      - pause: {}
+      - setWeight: 50
+      - pause: {}
+      - setWeight: 100
